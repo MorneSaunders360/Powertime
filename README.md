@@ -1,8 +1,7 @@
-# Solar Sunsynk ![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)
+# Powertime ![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)
 
 A Home Assistant integration to track your sunsynk solar system.
 
-![image](https://user-images.githubusercontent.com/109594480/233388451-6bad6329-64bc-42e0-b4e9-e63eb1ae4978.png)
 
 # Features
 1. Supports real-time monitoring of your Solar Sunsynk system's parameters.
