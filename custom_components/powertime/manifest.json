@@ -1,0 +1,12 @@
+{
+  "domain": "powertime",
+  "name": "Powertime ",
+  "after_dependencies": [""],
+  "codeowners": ["@MorneSaunders360"],
+  "config_flow": true,
+  "documentation": "https://github.com/MorneSaunders360/Solar-Sunsynk",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/MorneSaunders360/Solar-Sunsynk/issues",
+  "requirements": ["requests"],
+  "version": "1.0.0"
+}
