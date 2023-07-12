@@ -12,7 +12,7 @@ from .coordinator import PowertimeDataUpdateCoordinator
 # import logging
 # _LOGGER = logging.getLogger(__name__)
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up Sunsynk from a config entry."""
+    """Set up Powertime from a config entry."""
     
     client = powertime_api(entry.data[CONF_USERNAME],entry.data[CONF_PASSWORD],hass)
     coordinator = PowertimeDataUpdateCoordinator(hass, client=client)

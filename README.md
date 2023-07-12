@@ -1,10 +1,10 @@
 # Powertime ![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)
 
-A Home Assistant integration to track your sunsynk solar system.
+A Home Assistant integration to track your Powertime solar system.
 
 
 # Features
-1. Supports real-time monitoring of your Solar Sunsynk system's parameters.
+1. Supports real-time monitoring of your Solar Powertime system's parameters.
 2. Allows you to adjust the settings of your system remotely through Home Assistant.
 3. New: Now supports adjusting solar settings remotely through the set_solar_settings service.
 
@@ -17,19 +17,19 @@ A Home Assistant integration to track your sunsynk solar system.
 5. Add custom repository URL: Paste the URL of the repository you want to add.
 6. Select category: Choose 'Integration' from the category dropdown menu.
 7. Add: Click the Add button to confirm. This action should add the custom integration to HACS.
-8. Select "+ Explore & Download Repositories" and search for "Solar Sunsynk"
-9. Select "Solar Sunsynk" and "Download this repository with HACS"
+8. Select "+ Explore & Download Repositories" and search for "Solar Powertime"
+9. Select "Solar Powertime" and "Download this repository with HACS"
 10. Once downloaded, go to settings, then devices and services
-11. Click on add intergration and search for 'Solar Sunsynk'
+11. Click on add intergration and search for 'Solar Powertime'
 12. Follow the prompt with user name and then password, wait for 2 minutes and your data should be loaded
 13. Setup cards and automations
 
 # Service Usage
 1. To monitor your system, use the provided sensors in your Home Assistant dashboard.
-2. To adjust system settings, call the solar_sunsynk.set_solar_settings service with the desired parameters. For example:
+2. To adjust system settings, call the solar_Powertime.set_solar_settings service with the desired parameters. For example:
 
 ```yaml
-service: solar_sunsynk.set_solar_settings
+service: solar_Powertime.set_solar_settings
 data:
   sn: 2107269334
   safetyType: 2

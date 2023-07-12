@@ -1,4 +1,4 @@
-"""Parent class for SunsynkNames enum."""
+"""Parent class for PowertimeNames enum."""
 from enum import Enum, unique
 
 

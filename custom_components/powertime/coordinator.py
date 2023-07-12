@@ -1,4 +1,4 @@
-"""Coordinator for Sunsynk integration."""
+"""Coordinator for Powertime integration."""
 import logging
 
 import aiohttp
