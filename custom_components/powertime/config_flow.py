@@ -27,7 +27,7 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
     """Validate the user input allows us to connect."""
     client = powertime_api(data[CONF_USERNAME],data[CONF_PASSWORD],hass)
     try:
-        await client.authenticate(data[CONF_USERNAME], data[CONF_PASSWORD])
+        await client.authenticate()
 
     except aiohttp.ClientResponseError as e:
         if e.status == 401:
