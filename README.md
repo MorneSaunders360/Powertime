@@ -30,5 +30,5 @@ A Home Assistant integration to track your Powertime Last Purchase .
 
 # Sensors
  Go to developer tool thne select the states tab. Then filter the entities by searching for solar and you will be able to see all the sensors available.
- ![image](https://user-images.githubusercontent.com/109594480/233350555-f44916c6-9522-4cb0-9994-9d195711cd99.png)
+
 
