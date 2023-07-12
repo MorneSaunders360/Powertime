@@ -21,7 +21,7 @@ SENSOR_DESCRIPTIONS: List[PowertimeSensorDescription] = [
         name="Electricity Units",
         native_unit_of_measurement=ENERGY_KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
-        state_class=SensorStateClass.TOTAL_INCREASING,
+        state_class=SensorStateClass.MEASUREMENT,
     ),
     PowertimeSensorDescription(
         key=PowertimeNames.TotalElectricity,
