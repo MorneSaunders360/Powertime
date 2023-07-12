@@ -4,9 +4,9 @@
   "after_dependencies": [""],
   "codeowners": ["@MorneSaunders360"],
   "config_flow": true,
-  "documentation": "https://github.com/MorneSaunders360/Solar-Sunsynk",
+  "documentation": "https://github.com/MorneSaunders360/Powertime",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/MorneSaunders360/Solar-Sunsynk/issues",
+  "issue_tracker": "https://github.com/MorneSaunders360/Powertime/issues",
   "requirements": ["requests"],
   "version": "1.0.0"
 }

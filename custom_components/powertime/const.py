@@ -6,10 +6,10 @@ from homeassistant.const import Platform
 
 DOMAIN = "powertime"
 PLATFORMS = [Platform.SENSOR]
-SCAN_INTERVAL = timedelta(seconds=10)
+SCAN_INTERVAL = timedelta(seconds=120)
 
 NAME = "Powertime"
-ISSUE_URL = "https://github.com/MorneSaunders360/Solar-Sunsynk/issues"
+ISSUE_URL = "https://github.com/MorneSaunders360/Powertime/issues"
 
 STARTUP_MESSAGE = f"""
 -------------------------------------------------------------------

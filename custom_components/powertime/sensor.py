@@ -17,11 +17,25 @@ from .entity import PowertimeSensorDescription
 from .enums import PowertimeNames
 SENSOR_DESCRIPTIONS: List[PowertimeSensorDescription] = [
     PowertimeSensorDescription(
-        key=PowertimeNames.SolarProduction,
-        name="Solar Production",
+        key=PowertimeNames.ElectricityUnits,
+        name="Electricity Units",
         native_unit_of_measurement=ENERGY_KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    PowertimeSensorDescription(
+        key=PowertimeNames.TotalElectricity,
+        name="Total Electricity",
+        native_unit_of_measurement=None,
+        device_class=None,
+        state_class=None,
+    ),
+    PowertimeSensorDescription(
+        key=PowertimeNames.LastPurchaseDate,
+        name="Last Purchase Date",
+        native_unit_of_measurement=None,
+        device_class=None,
+        state_class=None,
     ),
 ]
 
