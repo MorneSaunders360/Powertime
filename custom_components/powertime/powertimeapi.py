@@ -1,11 +1,7 @@
 
 from homeassistant.core import HomeAssistant
-from datetime import datetime, timedelta, date
-import requests
-import json
-from functools import partial
+from datetime import date
 import logging
-import aiohttp
 from aiohttp import ClientSession
 from bs4 import BeautifulSoup
 _LOGGER = logging.getLogger(__name__)
