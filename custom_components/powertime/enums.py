@@ -6,6 +6,7 @@ from enum import Enum, unique
 class PowertimeNames(str, Enum):
     """Device names used by Powertime."""
 
-    ElectricityUnits = "Electricity Units"
-    TotalElectricity = "Total Electricity"
+    ElectricityUnitsHistory = "Electricity Units - History"
+    TotalElectricityAmountHistory = "Total Electricity Amount - Histor"
     LastPurchaseDate = "Last Purchase Date"
+    CurrentUnitsBoughtForToday = "Current Units Bought For Today"

@@ -1,6 +1,6 @@
 
 from homeassistant.core import HomeAssistant
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import requests
 import json
 from functools import partial
@@ -56,6 +56,7 @@ class powertime_api:
                 elif key == 'Total Electricity:':
                     total_electricity = cols[1].text.strip()
                 if units and date and meter_number and total_electricity:
+                    units = units.replace("Kwh's", "")
                     data_dict[date] = {
                         'Electricity Units': units,
                         'Meter Number': meter_number,
@@ -75,5 +76,12 @@ class powertime_api:
             if voucher: # check if rr is not empty
                 all_data.update(voucher) # add rr to all_data
         latest_date = max(all_data.keys())
+        today = date.today().strftime("%Y-%m-%d")
+        if latest_date == today:
+            latest_units = all_data[latest_date]['Electricity Units']
+        else:
+            latest_units = 0
+
+        all_data[latest_date]['Current Units'] = latest_units
         return all_data[latest_date]
 

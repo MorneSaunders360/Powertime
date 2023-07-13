@@ -42,7 +42,7 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
 
 
 class PowertimeonfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for Powerto,e."""
+    """Handle a config flow for Powertime."""
 
     VERSION = 1
 

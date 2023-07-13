@@ -17,15 +17,22 @@ from .entity import PowertimeSensorDescription
 from .enums import PowertimeNames
 SENSOR_DESCRIPTIONS: List[PowertimeSensorDescription] = [
     PowertimeSensorDescription(
-        key=PowertimeNames.ElectricityUnits,
-        name="Electricity Units",
+        key=PowertimeNames.ElectricityUnitsHistory,
+        name="Electricity Units - History",
         native_unit_of_measurement=ENERGY_KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
-        state_class=SensorStateClass.MEASUREMENT,
+        state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     PowertimeSensorDescription(
-        key=PowertimeNames.TotalElectricity,
-        name="Total Electricity",
+        key=PowertimeNames.CurrentUnitsBoughtForToday,
+        name="Current Units Bought For Today",
+        native_unit_of_measurement=ENERGY_KILO_WATT_HOUR,
+        device_class=SensorDeviceClass.ENERGY,
+        state_class=SensorStateClass.TOTAL_INCREASING,
+    ),
+    PowertimeSensorDescription(
+        key=PowertimeNames.TotalElectricityAmountHistory,
+        name="Total Electricity Amount - History",
         native_unit_of_measurement=None,
         device_class=None,
         state_class=None,
