@@ -1,6 +1,6 @@
 
 from homeassistant.core import HomeAssistant
-from datetime import date
+from datetime import date,datetime
 import logging
 from aiohttp import ClientSession
 from bs4 import BeautifulSoup
@@ -73,7 +73,11 @@ class powertime_api:
                 all_data.update(voucher) # add rr to all_data
         latest_date = max(all_data.keys())
         today = date.today().strftime("%Y-%m-%d")
-        if latest_date == today:
+        latest_date_dt = datetime.strptime(latest_date, "%Y-%m-%d %H:%M:%S") # replace with the actual format
+
+        # reformat the datetime object into a date string
+        latest_datematch = latest_date_dt.strftime("%Y-%m-%d")
+        if latest_datematch == today:
             latest_units = all_data[latest_date]['Electricity Units']
         else:
             latest_units = 0

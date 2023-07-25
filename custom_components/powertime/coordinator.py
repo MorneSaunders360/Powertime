@@ -25,19 +25,18 @@ class PowertimeDataUpdateCoordinator(DataUpdateCoordinator):
     async def _async_update_data(self):
         """Update data via library."""
         try:
-            # {'Electricity Units': "776.80 Kwh's", 'Meter Number': '14438893399', 'Total Electricity': 'R2500.00', 'Date': '2023-06-27 18:08:39'}
+            
             jsondata = await self.api.get_all_data()
-            inverterdata: dict[str, any] = {}
+            powertimedata: dict[str, any] = {}
             try: 
-                inverterdata.update({"Electricity Units - History": jsondata.get("Electricity Units", 0)})
-                inverterdata.update({"Total Electricity Amount - History": jsondata.get("Total Electricity", 0)})
-                inverterdata.update({"Last Purchase Date": jsondata.get("Date", 0)})
-                inverterdata.update({"Current Units Bought For Today": jsondata.get("Current Units", 0)})
-                inverterdata.update({"Model": jsondata.get("Meter Number", 0)})
+                powertimedata.update({"Electricity Units - History": jsondata.get("Electricity Units", 0)})
+                powertimedata.update({"Total Electricity Amount - History": jsondata.get("Total Electricity", 0)})
+                powertimedata.update({"Last Purchase Date": jsondata.get("Date", 0)})
+                powertimedata.update({"Current Units Bought For Today": jsondata.get("Current Units", 0)})
+                powertimedata.update({"Model": jsondata.get("Meter Number", 0)})
             except:
                 _LOGGER.error("No data")
-            _LOGGER.error(inverterdata)
-            self.data.update({jsondata.get("Meter Number"): inverterdata})
+            self.data.update({jsondata.get("Meter Number"): powertimedata})
 
 
             return self.data
