@@ -6,7 +6,7 @@ from homeassistant.components.sensor import (
     SensorEntity,
     SensorStateClass,
 )
-from homeassistant.const import ENERGY_KILO_WATT_HOUR, PERCENTAGE, POWER_WATT
+from homeassistant.const import UnitOfEnergy, PERCENTAGE, UnitOfPower
 from homeassistant.helpers.device_registry import DeviceEntryType
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
@@ -19,14 +19,14 @@ SENSOR_DESCRIPTIONS: List[PowertimeSensorDescription] = [
     PowertimeSensorDescription(
         key=PowertimeNames.ElectricityUnitsHistory,
         name="Electricity Units - History",
-        native_unit_of_measurement=ENERGY_KILO_WATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
     PowertimeSensorDescription(
         key=PowertimeNames.CurrentUnitsBoughtForToday,
         name="Current Units Bought For Today",
-        native_unit_of_measurement=ENERGY_KILO_WATT_HOUR,
+        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
